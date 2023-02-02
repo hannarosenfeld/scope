@@ -14,11 +14,21 @@ function partyFunc () {
 }
 
 funcTimer(5000, partyFunc); // in 5 seconds prints: "Party time!"
-
-
 ***********************************************************************/
 
-// Your code here
+function funcTimer(time,func) {
+  return setTimeout(func,time);
+}
+
+
+
+
+function partyFunc () {
+  console.log("Party time!")
+
+}
+
+funcTimer(5000, partyFunc); // in 5 seconds prints: "Party time!"
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 

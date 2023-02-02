@@ -8,15 +8,22 @@ let rudePerson = interrupter("what"); // => returns a function
 console.log(rudePerson("how are you")); // prints "how what are what you"
 console.log(rudePerson("I like pie")); // prints "I what like what pie"
 
-
 Invoking the interrupter function again:
 let rudePerson2 = interrupter("yo"); // => returns a function
 console.log(rudePerson2("I love dogs")); // prints "I yo love yo dogs"
-
-
 ***********************************************************************/
 
-// Your code here
+function interrupter(interruptingWord) {
+  let word = "";
+
+  return function(str) {
+    console.log(str.split(" "))
+    return str.split(" ").join(` ${interruptingWord} `)
+  }
+}
+
+let rudePerson2 = interrupter("yo"); // => returns a function
+console.log(rudePerson2("I love dogs")); // prints "I yo love yo dogs"
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
