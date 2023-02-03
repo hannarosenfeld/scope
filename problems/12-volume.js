@@ -13,7 +13,18 @@ function returned by recVolume should continue to return the original volume.
 
 ***********************************************************************/
 
-// Your code here
+function recVolume (height){
+  let numArr = [height]
+  return function (num) {
+    numArr.push(num);
+    if (numArr.length === 3){
+      return numArr[0] * numArr[1] * numArr[2];
+
+    }else {
+      return function recVolume
+    }
+  }
+}
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
